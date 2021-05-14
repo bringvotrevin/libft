@@ -6,13 +6,13 @@
 /*   By: dim <dim@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/31 17:56:02 by dim               #+#    #+#             */
-/*   Updated: 2021/01/04 22:44:23 by dim              ###   ########.fr       */
+/*   Updated: 2021/05/14 20:12:14 by dim              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				for_len(long n)
+int				for_len(long long n)
 {
 	int len;
 
@@ -25,7 +25,7 @@ int				for_len(long n)
 	return (len);
 }
 
-static char		*make_string(long n, size_t minus)
+static char		*make_string(long long n, size_t minus)
 {
 	size_t	len;
 	char	*str;
@@ -35,7 +35,7 @@ static char		*make_string(long n, size_t minus)
 	return (str);
 }
 
-char			*for_minus(char *str, long n)
+char			*for_minus(char *str, long long n)
 {
 	size_t len;
 
@@ -52,12 +52,12 @@ char			*for_minus(char *str, long n)
 
 char			*ft_itoa(int n)
 {
-	size_t	minus;
-	size_t	len;
-	long	nbr;
-	char	*str;
+	size_t		minus;
+	size_t		len;
+	long long	nbr;
+	char		*str;
 
-	nbr = (long)n;
+	nbr = (long long)n;
 	nbr = (nbr < 0 ? -nbr : nbr);
 	minus = (n < 0 ? 1 : 0);
 	len = for_len(nbr);
