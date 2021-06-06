@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dim <dim@student.42seoul.kr>               +#+  +:+       +#+        */
+/*   By: dim <dim@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/01 22:47:25 by dim               #+#    #+#             */
-/*   Updated: 2021/01/04 23:22:05 by dim              ###   ########.fr       */
+/*   Updated: 2021/06/06 19:22:56 by dim              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ char		**ft_split(char const *s, char c)
 		len = 0;
 		while (s[j] && s[j] == c)
 			j++;
-		while (s[j++] != c)
+		while (s[j] && s[j++] != c) 
 			len++;
 		if (!(arr[i] = (char *)malloc(sizeof(char) * (len + 1))))
 			return (ft_memerror(arr));
