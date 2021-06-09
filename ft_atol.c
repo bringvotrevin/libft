@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dim <dim@student.42seoul.kr>               +#+  +:+       +#+        */
+/*   By: dim <dim@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 11:39:12 by dim               #+#    #+#             */
-/*   Updated: 2021/05/31 12:22:10 by dim              ###   ########.fr       */
+/*   Updated: 2021/06/09 15:28:30 by dim              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#inlcude "libft.h"
+#include "libft.h"
 
-int		*ft_isspace(const char *str)
+int			ft_isspace(const char c)
 {
-	 return (str[i] >= 8 && str[i] <= 13);
+	 return (c >= 8 && c <= 13);
 }
 
-int		ft_atol(const char *str)
+long long	ft_atol(const char *str)
 {
 	int		num;
 	int		minus;
@@ -31,7 +31,7 @@ int		ft_atol(const char *str)
 	{
 		if (str[i] == '-')
 			minus = -1;
-		i++
+		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
