@@ -6,7 +6,7 @@
 /*   By: dim <dim@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 11:39:12 by dim               #+#    #+#             */
-/*   Updated: 2021/06/09 15:38:24 by dim              ###   ########.fr       */
+/*   Updated: 2021/06/10 21:33:34 by dim              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 
 int			ft_isspace(const char c)
 {
-	 return ((c >= 8 && c <= 13) || c == ' ');
+	 return ((c >= 9 && c <= 13) || c == ' ');
 }
 
 long long	ft_atol(const char *str)
 {
-	int		num;
-	int		minus;
-	int		i;
+	long long	num;
+	int			minus;
+	int			i;
 
 	i = 0;
 	num = 0;
@@ -46,7 +46,7 @@ long long	ft_atol(const char *str)
 		return (123456789123456789);
 	return (num * minus);
 }
-
+/* 
 int		main()
 {
 	char	str[4] = "1";
@@ -57,4 +57,4 @@ int		main()
 	printf("str : %s\n", str);
 	printf("num : %lld\n", num);
 	return 0;
-}
+} */
